@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false, // SPA モード
+  nitro: {
+    preset: "cloudflare_pages", // Cloudflare Pages 用の設定
+  },
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   app: {

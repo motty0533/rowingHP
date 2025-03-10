@@ -1,48 +1,52 @@
 <template>
-  <section class="hero">
-    <div class="video-box overlay">
-      <video
-        class="video"
-        src="/assets/video/sample.mp4"
-        muted
-        autoplay
-        loop
-        playsinline
-      ></video>
-    </div>
-    <div class="text-box">
-      <h1>漕ぎ出せ、<br />阪大医学部</h1>
-    </div>
-  </section>
-  <section class="maincontent">
-    <div class="wrapper">
-      <h2 class="midashi rowing" eng="WHAT'S ROWING?">ボートとは？</h2>
-      <p>５人１組で1000mのタイムを競う競技です。</p>
-      <p>あああああああああああああああああああああああああああああああああ</p>
-      <p>いいいいいいいいいいいいいいいいいいいいいいいいいいい</p>
-    </div>
-    <div class="wrapper">
-      <h2 class="midashi" eng="RESULT">大会結果</h2>
-      <h3>2024年西医体総合優勝！</h3>
-      <p>ARES　一般男子舵手付きフォア優勝</p>
-      <p>SIMMAH　一般女子舵手付きクォドルプル３位</p>
-      <NuxtLink to="/result" class="arrowbtn" style="">more</NuxtLink>
-    </div>
-    <div class="wrapper">
-      <h2 class="midashi" eng="PLACE">活動場所</h2>
-      <iframe
-        class="map"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d416.7956765579929!2d135.52377016238353!3d34.69952873463286!3m2!1i1024!2i768!4f55.1!3m3!1m2!1s0x6000e6d36933e8f5%3A0xdb8cf7c6ec4b3499!2z44CSNTM0LTAwMjcg5aSn6Ziq5bqc5aSn6Ziq5biC6YO95bO25Yy65Lit6YeO55S677yR5LiB55uu77yR77yQ4oiS77yS77yX!5e0!3m2!1sja!2sjp!4v1741566345127!5m2!1sja!2sjp"
-        width="100%"
-        style="border: 0"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-      <p>
-        毛馬桜之宮公園にある艇庫を拠点に活動しています。春は桜、その他の季節はヌートリアの糞が楽しめます。
-      </p>
-    </div>
-  </section>
+  <NuxtLayout>
+    <section class="hero">
+      <div class="video-box overlay">
+        <video
+          class="video"
+          src="/assets/video/sample.mp4"
+          muted
+          autoplay
+          loop
+          playsinline
+        ></video>
+      </div>
+      <div class="text-box">
+        <h1>漕ぎ出せ、<br />阪大医学部</h1>
+      </div>
+    </section>
+    <section class="maincontent">
+      <div class="wrapper">
+        <h2 class="midashi rowing" eng="WHAT'S ROWING?">ボートとは？</h2>
+        <p>５人１組で1000mのタイムを競う競技です。</p>
+        <p>
+          あああああああああああああああああああああああああああああああああ
+        </p>
+        <p>いいいいいいいいいいいいいいいいいいいいいいいいいいい</p>
+      </div>
+      <div class="wrapper">
+        <h2 class="midashi" eng="RESULT">大会結果</h2>
+        <h3>2024年西医体総合優勝！</h3>
+        <p>ARES　一般男子舵手付きフォア優勝</p>
+        <p>SIMMAH　一般女子舵手付きクォドルプル３位</p>
+        <NuxtLink to="/result" class="arrowbtn" style="">more</NuxtLink>
+      </div>
+      <div class="wrapper">
+        <h2 class="midashi" eng="PLACE">活動場所</h2>
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d416.7956765579929!2d135.52377016238353!3d34.69952873463286!3m2!1i1024!2i768!4f55.1!3m3!1m2!1s0x6000e6d36933e8f5%3A0xdb8cf7c6ec4b3499!2z44CSNTM0LTAwMjcg5aSn6Ziq5bqc5aSn6Ziq5biC6YO95bO25Yy65Lit6YeO55S677yR5LiB55uu77yR77yQ4oiS77yS77yX!5e0!3m2!1sja!2sjp!4v1741566345127!5m2!1sja!2sjp"
+          width="100%"
+          style="border: 0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <p>
+          毛馬桜之宮公園にある艇庫を拠点に活動しています。春は桜、その他の季節はヌートリアの糞が楽しめます。
+        </p>
+      </div>
+    </section>
+  </NuxtLayout>
 </template>
 
 <style lang="scss" scoped>

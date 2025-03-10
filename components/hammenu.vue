@@ -1,23 +1,44 @@
 <template>
   <div class="outer-menu">
-    <input class="checkbox-toggle" type="checkbox" />
-    <div class="hamburger">
+    <input class="checkbox-toggle" type="checkbox" ref="checkbox" />
+    <div class="hamburger" @click="toggleMenu">
       <div></div>
     </div>
     <div class="menu">
       <div>
         <div>
           <ul>
-            <li><NuxtLink to="/">Top</NuxtLink></li>
-            <li><NuxtLink to="/result">Result</NuxtLink></li>
-            <li><NuxtLink to="/blog">Blog</NuxtLink></li>
-            <li><a href="#">Contact</a></li>
+            <li v-for="item in items" :key="item.index">
+              <NuxtLink :to="'/' + item.url" @click="closeMenu">{{ item.name }}</NuxtLink>
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        { url: "", name: "Top" },
+        { url: "result", name: "Result" },
+        {url:"blog",name:"Blog"}
+      ],
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.$refs.checkbox.checked = !this.$refs.checkbox.checked;
+    },
+    closeMenu() {
+      this.$refs.checkbox.checked = false;
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 $main-color: black;

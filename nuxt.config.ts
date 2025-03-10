@@ -17,4 +17,15 @@ export default defineNuxtConfig({
     },
   },
   css: ["assets/css/main.scss"],
+  modules: ["@nuxt/image"],
+  image: {
+    // 画像最適化のオプション
+    provider: "ipx", // デフォルトのローカルプロバイダー
+    presets: {
+      default: {
+        format: "webp",
+        quality: 80,
+      },
+    },
+  },
 });

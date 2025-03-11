@@ -17,7 +17,7 @@
     </section>
     <section class="maincontent">
       <div class="wrapper">
-        <h2 class="midashi rowing" eng="WHAT'S ROWING?">ボートとは？</h2>
+        <h2 class="midashi rowing" eng="What's rowing?">ボートとは？</h2>
         <p>５人１組で1000mのタイムを競う競技です。</p>
         <p>
           あああああああああああああああああああああああああああああああああ
@@ -25,14 +25,14 @@
         <p>いいいいいいいいいいいいいいいいいいいいいいいいいいい</p>
       </div>
       <div class="wrapper">
-        <h2 class="midashi" eng="RESULT">大会結果</h2>
+        <h2 class="midashi" eng="Result">大会結果</h2>
         <h3>2024年西医体総合優勝！</h3>
         <p>ARES　一般男子舵手付きフォア優勝</p>
         <p>SIMMAH　一般女子舵手付きクォドルプル３位</p>
         <NuxtLink to="/result" class="arrowbtn" style="">more</NuxtLink>
       </div>
       <div class="wrapper">
-        <h2 class="midashi" eng="PLACE">活動場所</h2>
+        <h2 class="midashi" eng="Place">活動場所</h2>
         <iframe
           class="map"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d416.7956765579929!2d135.52377016238353!3d34.69952873463286!3m2!1i1024!2i768!4f55.1!3m3!1m2!1s0x6000e6d36933e8f5%3A0xdb8cf7c6ec4b3499!2z44CSNTM0LTAwMjcg5aSn6Ziq5bqc5aSn6Ziq5biC6YO95bO25Yy65Lit6YeO55S677yR5LiB55uu77yR77yQ4oiS77yS77yX!5e0!3m2!1sja!2sjp!4v1741566345127!5m2!1sja!2sjp"
@@ -114,17 +114,17 @@
     }
     .midashi::before {
       position: absolute;
-      top: -0.45em;
-      // left: 50%;
+      top: -0.5em;
       transform: translateX(-5%);
       color: #afeeee;
-      font-size: 2.5em;
-      // text-transform: uppercase;
+      font-size: 2.7em;
       content: attr(eng);
       z-index: -1;
+      font-family: "Great Vibes";
+      font-weight: 400;
     }
     .rowing::before {
-      font-size: 1.7em;
+      font-size: 16vw;
       top: -0.5em;
     }
 

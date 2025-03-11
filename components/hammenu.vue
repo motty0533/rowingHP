@@ -9,7 +9,9 @@
         <div>
           <ul>
             <li v-for="item in items" :key="item.index">
-              <NuxtLink :to="'/' + item.url" @click="closeMenu">{{ item.name }}</NuxtLink>
+              <NuxtLink :to="'/' + item.url" @click="closeMenu"
+                >{{ item.name }}<span>{{ item.jpa }}</span>
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -23,9 +25,9 @@ export default {
   data() {
     return {
       items: [
-        { url: "", name: "Top" },
-        { url: "result", name: "Result" },
-        {url:"blog",name:"Blog"}
+        { url: "", name: "Top", jpa: "トップページ" },
+        { url: "result", name: "Result", jpa: "大会結果" },
+        { url: "blog", name: "Blog", jpa: "ブログ" },
       ],
     };
   },
@@ -48,7 +50,7 @@ $hamburger-menu-bg-color: fade-out(#afeeee, 0.25);
 $hamburger-menu-line-height: 2px;
 $hover-line-height: $hamburger-menu-line-height;
 $hover-color: darken($main-color, 10%);
-$content-bg-color: fade-out(#afeeee, 0.03);
+$content-bg-color: fade-out(#4c6cb3, 0.03);
 $anim-duration: 0.4s;
 
 .flex-center {
@@ -85,11 +87,13 @@ a:active {
       & + .hamburger {
         > div {
           transform: rotate(135deg);
+          background: white;
 
           &:before,
           &:after {
             top: 0;
             transform: rotate(90deg);
+            background: white;
           }
 
           &:after {
@@ -130,7 +134,6 @@ a:active {
     border-radius: 0 $hamburger-menu-border-radius $hamburger-menu-border-radius
       0;
     cursor: pointer;
-    // transition: box-shadow $anim-duration ease;
     backface-visibility: hidden;
     @extend .flex-center;
 
@@ -189,7 +192,6 @@ a:active {
       @extend .flex-center;
 
       > div {
-        text-align: center;
         max-width: 90vw;
         max-height: 100vh;
         opacity: 0;
@@ -197,45 +199,44 @@ a:active {
         overflow-y: auto;
         flex: none;
         @extend .flex-center;
+        width: 100%;
 
         > ul {
           list-style: none;
-          padding: 0 1em;
+          width: 100%;
           margin: 0;
           display: block;
           max-height: 100vh;
+          padding-left: 1.3em;
 
           > li {
             padding: 0;
             margin: 1em;
-            font-size: 24px;
+            margin-left: 0;
+            font-size: 3.5em;
             display: block;
+            font-weight: 400;
+            text-align: left;
+            font-family: "Great Vibes";
+            white-space: pre-line;
+            color: white;
 
             > a {
               position: relative;
               display: inline;
               cursor: pointer;
               transition: color $anim-duration ease;
+              line-height: 10%;
 
               &:hover {
                 color: $hover-color;
-
-                &:after {
-                  width: 100%;
-                }
               }
-
-              &:after {
-                content: "";
-                position: absolute;
-                z-index: 1;
-                bottom: -0.15em;
-                left: 0;
-                width: 0;
-                height: $hover-line-height;
-                background: $hover-color;
-                transition: width $anim-duration ease;
-              }
+            }
+            a span {
+              display: block;
+              font-size: 0.35em;
+              font-family: "Shippori Mincho";
+              margin-left: 0.25em;
             }
           }
         }
@@ -243,4 +244,12 @@ a:active {
     }
   }
 }
+// .checkbox-toggle:checked + .hamburger > div {
+//   background: white; // バツ印の色を白に変更
+
+//   &:before,
+//   &:after {
+//     background: white; // バツ印の色を白に変更
+//   }
+// }
 </style>

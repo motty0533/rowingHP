@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Header />
+    <Hammenu />
     <NuxtPage />
   </div>
 </template>
 
 <script>
-import Header from "~/components/header.vue";
+import Hammenu from "~/components/hammenu.vue";
 export default {
   components: {
-    Header,
+    Hammenu,
   },
 };
 </script>
@@ -21,14 +21,6 @@ export default {
 }
 .page-enter-from,
 .page-leave-to {
-  opacity: 0;
-}
-.layout-enter-active,
-.layout-leave-active {
-  transition: all 0.5s;
-}
-.layout-enter-from,
-.layout-leave-to {
   opacity: 0;
 }
 </style> 

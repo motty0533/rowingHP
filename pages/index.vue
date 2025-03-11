@@ -25,7 +25,7 @@
         <p>いいいいいいいいいいいいいいいいいいいいいいいいいいい</p>
       </div>
       <div class="wrapper">
-        <h2 class="midashi" eng="Result">大会結果</h2>
+        <h2 class="midashi" eng="Results">大会結果</h2>
         <h3>2024年西医体総合優勝！</h3>
         <p>ARES　一般男子舵手付きフォア優勝</p>
         <p>SIMMAH　一般女子舵手付きクォドルプル３位</p>
@@ -48,6 +48,11 @@
     </section>
   </div>
 </template>
+<script>
+definePageMeta({
+  layout: "top",
+});
+</script>
 
 <style lang="scss" scoped>
 .hero {

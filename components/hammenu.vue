@@ -26,7 +26,7 @@ export default {
     return {
       items: [
         { url: "", name: "Top", jpa: "トップページ" },
-        { url: "result", name: "Result", jpa: "大会結果" },
+        { url: "result", name: "Results", jpa: "大会結果" },
         { url: "blog", name: "Blog", jpa: "ブログ" },
       ],
     };
@@ -46,11 +46,11 @@ export default {
 $main-color: black;
 $hamburger-menu-size: 60px;
 $hamburger-menu-border-radius: 0.12em;
-$hamburger-menu-bg-color: fade-out(#afeeee, 0.25);
+$hamburger-menu-bg-color: fade-out(#0f2350, 0.25);
 $hamburger-menu-line-height: 2px;
 $hover-line-height: $hamburger-menu-line-height;
 $hover-color: darken($main-color, 10%);
-$content-bg-color: fade-out(#4c6cb3, 0.03);
+$content-bg-color: fade-out(#0f2350, 0.03);
 $anim-duration: 0.4s;
 
 .flex-center {
@@ -213,7 +213,7 @@ a:active {
             padding: 0;
             margin: 1em;
             margin-left: 0;
-            font-size: 3.5em;
+            font-size: 3em;
             display: block;
             font-weight: 400;
             text-align: left;
@@ -244,12 +244,4 @@ a:active {
     }
   }
 }
-// .checkbox-toggle:checked + .hamburger > div {
-//   background: white; // バツ印の色を白に変更
-
-//   &:before,
-//   &:after {
-//     background: white; // バツ印の色を白に変更
-//   }
-// }
 </style>

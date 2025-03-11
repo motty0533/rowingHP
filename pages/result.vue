@@ -1,7 +1,7 @@
 <template>
-  <NuxtLayout>
+  <div>
     <div><h1>戦績紹介</h1></div>
-  </NuxtLayout>
+  </div>
 </template>
 
 

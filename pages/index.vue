@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout>
+  <div>
     <section class="hero">
       <div class="video-box overlay">
         <video
@@ -46,7 +46,7 @@
         </p>
       </div>
     </section>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style lang="scss" scoped>

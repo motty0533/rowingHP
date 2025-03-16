@@ -6,12 +6,6 @@
 </template>
 
 <script>
-import Imgmodal from "~/components/modal.vue";
-export default {
-  components: {
-    Imgmodal,
-  },
-};
 </script>
 
 

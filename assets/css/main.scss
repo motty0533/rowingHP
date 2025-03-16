@@ -5,6 +5,14 @@ html {
   font-optical-sizing: auto;
   font-style: normal;
 
+  .content {
+  margin: 5%;
+  h2 {
+    color: #0f2350;
+    font-size: 2em;
+    margin-bottom: 0.7em;
+}
+}
 .arrowbtn{
 	--arrow-color: #333; /* 矢印の色を設定 */
 	display: inline-flex; /* 横並びに配置 */

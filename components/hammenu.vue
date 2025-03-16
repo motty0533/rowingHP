@@ -28,6 +28,7 @@ export default {
         { url: "", name: "Top", jpa: "トップページ" },
         { url: "result", name: "Results", jpa: "大会結果" },
         { url: "blog", name: "Blog", jpa: "ブログ" },
+        { url: "member", name: "Members", jpa: "部員紹介" },
       ],
     };
   },
@@ -213,7 +214,7 @@ a:active {
             padding: 0;
             margin: 1em;
             margin-left: 0;
-            font-size: 3em;
+            font-size: 2.7em;
             display: block;
             font-weight: 400;
             text-align: left;
@@ -234,7 +235,7 @@ a:active {
             }
             a span {
               display: block;
-              font-size: 0.35em;
+              font-size: 0.4em;
               font-family: "Shippori Mincho";
               margin-left: 0.25em;
             }

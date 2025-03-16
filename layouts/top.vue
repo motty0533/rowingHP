@@ -23,4 +23,12 @@ export default {
 .page-leave-to {
   opacity: 0;
 }
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.5s;
+}
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0;
+}
 </style> 

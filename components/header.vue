@@ -14,7 +14,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 a {
-  display: block;
+  display: inline-block;
   z-index: 3;
   margin-top: calc(3vh + 7px);
   margin-left: 5%;

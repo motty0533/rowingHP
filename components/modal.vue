@@ -1,8 +1,6 @@
-<!-- components/Modal.vue -->
 <template>
-  <div class="modal-button">
-    <nuxt-img src="/image/member/ouchi.webp" @click="isOpen = true" />
-    <slot name="button">開く</slot>
+  <div class="modal-button" @click="isOpen = true">
+    <slot name="button"></slot>
 
     <Teleport to="body">
       <Transition name="modal">
@@ -47,11 +45,32 @@ const closeModal = () => {
 };
 </script>
 
-<style lang="scss" scoped>
-.modal-button img{
-  border-radius: 50%;
+<style lang="scss">
+// ボタンデザイン
+.modal-button {
+  img {
+    border-radius: 50%;
+    margin-bottom: 0.5em;
+  }
+  p {
+    line-height: 1.3;
+  }
+  .name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 0.3em;
+  }
+  .position {
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.8em;
+    text-transform: lowercase;
+    color: #555;
+  }
 }
 
+// オーバーレイデザイン
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -67,12 +86,51 @@ const closeModal = () => {
 
 .modal-content {
   background-color: white;
-  padding: 20px;
+  padding: 10%;
   border-radius: 8px;
   max-width: 90%;
   max-height: 90%;
   overflow: auto;
   position: relative;
+
+  img {
+    position: relative;
+  }
+
+  h2 {
+    font-size: 2em;
+    line-height: 1.2;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    span {
+      display: block;
+      font-size: 0.75em;
+      text-transform: lowercase;
+      color: #444;
+      font-weight: 500;
+    }
+  }
+  .description::before {
+    position: absolute;
+    bottom: -1em;
+    right: 0;
+    color: #afeeee;
+    font-size: 2.7em;
+    content: "#" attr(eng);
+    z-index: -1;
+    font-family: "Great Vibes";
+    font-weight: 400;
+  }
+
+  .school {
+    margin-bottom: 0.7em;
+  }
+  p {
+    position: relative;
+    white-space: pre-wrap;
+    z-index: 1;
+  }
 }
 
 .modal-close {

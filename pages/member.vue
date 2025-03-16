@@ -4,12 +4,20 @@
     <div class="modal-container">
       <Modal v-for="item in items" :key="item.id">
         <template #button>
+          <nuxt-img format="webp" :src="'/image/member/' + item.url + '.jpg'" />
           <p class="name">{{ item.title }}</p>
           <p class="position">{{ item.position }}</p>
         </template>
         <template #content>
-          <h2>{{ item.title }}</h2>
-          <p>{{ item.description }}</p>
+          <nuxt-img format="webp" :src="'/image/member/' + item.url + '.jpg'" />
+          <h2>
+            <span>{{ item.position }}</span>
+            {{ item.title }}
+          </h2>
+          <p class="school">{{ item.school }}</p>
+          <p class="description" :eng="item.position">
+            {{ item.description }}
+          </p>
         </template>
       </Modal>
     </div>
@@ -19,34 +27,12 @@
 const items = ref([
   {
     id: 1,
-    title: "山本颯太郎",
-    position: "cox",
-    description: "モーダル1の内容です。ここに詳細情報が入ります。",
-  },
-  {
-    id: 2,
-    title: "モーダル2",
-    description: "モーダル2の内容です。ここに詳細情報が入ります。",
-  },
-  {
-    id: 3,
-    title: "モーダル3",
-    description: "モーダル3の内容です。ここに詳細情報が入ります。",
-  },
-  {
-    id: 4,
-    title: "モーダル4",
-    description: "モーダル4の内容です。ここに詳細情報が入ります。",
-  },
-  {
-    id: 5,
-    title: "モーダル5",
-    description: "モーダル5の内容です。ここに詳細情報が入ります。",
-  },
-  {
-    id: 6,
-    title: "モーダル6",
-    description: "モーダル6の内容です。ここに詳細情報が入ります。",
+    title: "加島大知",
+    position: "Manager",
+    school: "医学部医学科/渋谷幕張高校",
+    description:
+      "ボート部1のおしゃべり畜生！動き出した彼の口は誰にも止めることができない！そんな彼はもとツイ廃。今はツイッターの代わりに口でつぶやいているよ！みんなから畜生と呼ばれすぎて本名を忘れられた畜生はせめて後輩には名前でよんでもらえることを期待している、、、すぐに病みがちな彼は気分転換に京都まで夜通し歩いたとかいう噂もあるとか？畜生さんの奇妙な生態を解き明かしたい新入生はぜひ新歓へ！",
+    url: "ouchi",
   },
 ]);
 </script>
@@ -55,20 +41,6 @@ const items = ref([
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  p{
-    line-height: 1;
-  }
-  .name {
-    text-align: center;
-    font-weight: 700;
-    font-size: 0.75rem;
-    margin-top: 0.3em;
-  }
-  .position{
-    text-align: center;
-    font-weight: 400;
-    font-size: 0.9em;
-  }
 }
 
 /* レスポンシブ対応 */

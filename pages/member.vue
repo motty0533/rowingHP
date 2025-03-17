@@ -1,8 +1,9 @@
 <template>
   <div class="content">
     <h2>部員紹介</h2>
+    <h3>２回生</h3>
     <div class="modal-container">
-      <Modal v-for="item in items" :key="item.id">
+      <Modal v-for="item in two" :key="item.id">
         <template #button>
           <nuxt-img format="webp" :src="'/image/member/' + item.url + '.jpg'" />
           <p class="name">{{ item.title }}</p>
@@ -21,22 +22,27 @@
         </template>
       </Modal>
     </div>
+    <h3>３回生</h3>
+    <h3>４回生</h3>
+    <h3>５回生</h3>
   </div>
 </template>
 <script setup>
-const items = ref([
-  {
-    id: 1,
-    title: "加島大知",
-    position: "Manager",
-    school: "医学部医学科/渋谷幕張高校",
-    description:
-      "ボート部1のおしゃべり畜生！動き出した彼の口は誰にも止めることができない！そんな彼はもとツイ廃。今はツイッターの代わりに口でつぶやいているよ！みんなから畜生と呼ばれすぎて本名を忘れられた畜生はせめて後輩には名前でよんでもらえることを期待している、、、すぐに病みがちな彼は気分転換に京都まで夜通し歩いたとかいう噂もあるとか？畜生さんの奇妙な生態を解き明かしたい新入生はぜひ新歓へ！",
-    url: "ouchi",
-  },
-]);
+import gradetwo from "~/assets/member/grade2.json";
+const two = ref(gradetwo);
 </script>
 <style lang="scss" scoped>
+h3 {
+  // display: inline-block;
+  font-size: 1.3em;
+  font-weight: 500;
+  padding: 0.2em; /*文字周りの余白*/
+  padding-left: 0.5em;
+  background: #eaf3ff; /*背景色*/
+  border-bottom: solid 3px #0f2350; /*下線*/
+  margin-bottom: 1em;
+}
+
 .modal-container {
   display: flex;
   flex-wrap: wrap;

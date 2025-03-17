@@ -26,9 +26,10 @@ export default {
     return {
       items: [
         { url: "", name: "Top", jpa: "トップページ" },
+        { url: "schedule", name: "Schedule", jpa: "大会日程" },
+        { url: "member", name: "Members", jpa: "部員紹介" },
         { url: "result", name: "Results", jpa: "大会結果" },
         { url: "blog", name: "Blog", jpa: "ブログ" },
-        { url: "member", name: "Members", jpa: "部員紹介" },
       ],
     };
   },
@@ -214,7 +215,7 @@ a:active {
             padding: 0;
             margin: 1em;
             margin-left: 0;
-            font-size: 2.7em;
+            font-size: 2.5em;
             display: block;
             font-weight: 400;
             text-align: left;

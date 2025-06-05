@@ -122,21 +122,21 @@ definePageMeta({
 
     .midashi {
       position: relative;
-      margin-bottom: 0.2rem;
+      margin-bottom: .5em;
       font-weight: bold;
       font-size: 2.3rem;
     }
-    .midashi::before {
-      position: absolute;
-      top: -0.5em;
-      transform: translateX(-5%);
-      color: #afeeee;
-      font-size: 2.7em;
-      content: attr(eng);
-      z-index: -1;
-      font-family: "Great Vibes";
-      font-weight: 400;
-    }
+    // .midashi::before {
+    //   position: absolute;
+    //   top: -0.5em;
+    //   transform: translateX(-5%);
+    //   color: #afeeee;
+    //   font-size: 2.7em;
+    //   content: attr(eng);
+    //   z-index: -1;
+    //   font-family: "Great Vibes";
+    //   font-weight: 400;
+    // }
     .rowing::before {
       font-size: 16vw;
       top: -0.5em;
@@ -195,6 +195,7 @@ definePageMeta({
   .result {
     display: flex;
     flex-direction: column;
+    gap: 2em;
     .img-frame {
       position: relative;
       width: 100%;
@@ -357,7 +358,7 @@ definePageMeta({
     .whats {
       justify-content: space-between;
       flex-direction: row;
-      gap: 2em;
+      gap: 4em;
       img {
         width: 40%;
       }
@@ -365,7 +366,7 @@ definePageMeta({
     .result {
       flex-direction: row;
       justify-content: space-between;
-      gap: 2em;
+      gap: 4em;
       .img-frame {
         width: 40%;
         height: calc(160vw / 7);

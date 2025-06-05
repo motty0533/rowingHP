@@ -16,13 +16,16 @@
       </div>
     </section>
     <section class="maincontent">
-      <div class="wrapper">
-        <h2 class="midashi rowing" eng="What's rowing?">ボートとは？</h2>
-        <p>５人１組で1000mのタイムを競う競技です。</p>
-        <p>
-          あああああああああああああああああああああああああああああああああ
-        </p>
-        <p>いいいいいいいいいいいいいいいいいいいいいいいいいいい</p>
+      <div class="wrapper whats">
+        <nuxt-img format="webp" src="/image/rowing.jpg" />
+        <div>
+          <h2 class="midashi rowing" eng="What's rowing?">ボートとは？</h2>
+          <p>５人１組で1000mのタイムを競う競技です。</p>
+          <p>
+            あああああああああああああああああああああああああああああああああ
+          </p>
+          <p>いいいいいいいいいいいいいいいいいいいいいいいいいいい</p>
+        </div>
       </div>
       <div class="wrapper">
         <h2 class="midashi" eng="Results">大会結果</h2>
@@ -174,6 +177,15 @@ definePageMeta({
       margin-bottom: 1.5em;
     }
   }
+
+  .whats {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2em;
+    img {
+      // box-shadow: 0 0 .7em gray;
+    }
+  }
 }
 @media screen and (min-width: 1024px) {
   /* ヒーローセクションの調整 */
@@ -196,7 +208,6 @@ definePageMeta({
     margin-bottom: 7em; /* フッターとの間隔を調整 */
     margin-left: 10%;
     margin-right: 10%; /* 中央寄せ */
-    max-width: 1140px; /* コンテンツの最大幅を設定し、横に広がりすぎるのを防ぐ */
 
     .wrapper {
       margin-bottom: 7em; /* 各コンテンツブロック間のマージンを調整 */
@@ -206,12 +217,12 @@ definePageMeta({
         margin-bottom: 1rem; /* 見出しと続く要素との間隔を調整 */
       }
       .midashi::before {
-        font-size: 2.5em; /* 英語の装飾文字のサイズを調整 */
+        font-size: 2.3em; /* 英語の装飾文字のサイズを調整 */
         top: -0.4em; /* 位置を微調整 */
       }
       .rowing::before {
         /* 16vw はデスクトップでは非常に大きくなるため、固定値に近い単位か、vwの値を調整 */
-        font-size: 2.5em; /* 例としてrem単位で指定（約144px相当）。元のvw指定より予測可能なサイズに */
+        font-size: 2em; /* 例としてrem単位で指定（約144px相当）。元のvw指定より予測可能なサイズに */
         /* もし画面幅に応じてある程度スケールさせたい場合は clamp(6rem, 10vw, 9rem) のような指定も考えられます */
         top: -0.45em; /* フォントサイズ変更に伴い、位置を微調整 */
       }
@@ -237,6 +248,15 @@ definePageMeta({
         /* 必要に応じて地図コンテナに最大幅を設定することも可能です */
         /* 例: max-width: 800px; display: block; margin-left: auto; margin-right: auto; */
         /* （ただし、.maincontent に max-width が設定されているため、地図が極端に広がることはありません） */
+      }
+    }
+    .whats {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 2em;
+      img {
+        width: 40%;
       }
     }
   }

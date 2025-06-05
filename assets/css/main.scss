@@ -18,16 +18,7 @@ html {
 }
 
 }
-.arrowbtn{
-	--arrow-color: #333; /* 矢印の色を設定 */
-	display: inline-flex; /* 横並びに配置 */
-	align-items: center; /* 垂直方向を中央に揃える */
-	color: var(--arrow-color); /* 文字色を矢印の色と一致 */
-	text-decoration: none; /* 下線を非表示 */
-	position: relative; /* 疑似要素の位置基準 */
-  margin-right: 2em;
-  float: right;
-}
+
 
 .arrowbtn::after {
 	border-bottom: 1px solid var(--arrow-color); /* 下線のスタイルを矢印として設定 */

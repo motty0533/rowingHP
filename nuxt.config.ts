@@ -16,6 +16,7 @@ export default defineNuxtConfig({
           rel: "stylesheet",
           href: "https://unpkg.com/modern-css-reset/dist/reset.min.css",
         },
+        { rel: "icon", type: "image/x-icon", href: "/icon.ico" },
       ],
     },
   },

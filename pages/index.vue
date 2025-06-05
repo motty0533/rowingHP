@@ -144,11 +144,90 @@ definePageMeta({
       font-weight: 400;
     }
 
+    .arrowbtn {
+      --arrow-color: #333; /* 矢印の色を設定 */
+      display: inline-flex; /* 横並びに配置 */
+      align-items: center; /* 垂直方向を中央に揃える */
+      color: var(--arrow-color); /* 文字色を矢印の色と一致 */
+      text-decoration: none; /* 下線を非表示 */
+      position: relative; /* 疑似要素の位置基準 */
+      margin-right: 2em;
+      float: right;
+    }
+
     .map {
       width: 100%;
       aspect-ratio: 9/9;
       margin-top: 3em;
       margin-bottom: 1.5em;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* ヒーローセクションの調整 */
+  .hero {
+    .text-box {
+      top: 70%; /* スマートフォン表示時(80%)より少し上に配置 */
+      left: 3%; /* 左からの位置を相対的に指定（元の-2emの代わりに画面幅に応じた余白を確保） */
+      width: 94%; /* 左右の3%ずつの余白を考慮した幅 */
+    }
+    h1 {
+      font-size: 3.6rem; /* スマートフォン表示時(40px)よりフォントサイズを大きく */
+      padding: 0 4rem; /* 左右のパディングを広げ、テキストが画面端に寄るのを防ぐ */
+      line-height: 1.35; /* 行間を少し広げて読みやすく */
+    }
+  }
+
+  /* メインコンテンツセクションの調整 */
+  .maincontent {
+    margin-top: 7em; /* ヒーローセクションとの間隔を調整 */
+    margin-bottom: 7em; /* フッターとの間隔を調整 */
+    margin-left: auto; /* 中央寄せ */
+    margin-right: auto; /* 中央寄せ */
+    padding-left: 2rem; /* コンテンツ全体の左右の余白 */
+    padding-right: 2rem;
+    max-width: 1140px; /* コンテンツの最大幅を設定し、横に広がりすぎるのを防ぐ */
+
+    .wrapper {
+      margin-bottom: 7em; /* 各コンテンツブロック間のマージンを調整 */
+
+      .midashi {
+        font-size: 2.8rem; /* 見出しのフォントサイズを大きく */
+        margin-bottom: 1rem; /* 見出しと続く要素との間隔を調整 */
+      }
+      .midashi::before {
+        font-size: 2.5em; /* 英語の装飾文字のサイズを調整 */
+        top: -0.4em; /* 位置を微調整 */
+      }
+      .rowing::before {
+        /* 16vw はデスクトップでは非常に大きくなるため、固定値に近い単位か、vwの値を調整 */
+        font-size: 2.5em; /* 例としてrem単位で指定（約144px相当）。元のvw指定より予測可能なサイズに */
+        /* もし画面幅に応じてある程度スケールさせたい場合は clamp(6rem, 10vw, 9rem) のような指定も考えられます */
+        top: -0.45em; /* フォントサイズ変更に伴い、位置を微調整 */
+      }
+
+      h3 {
+        font-size: 1.8rem; /* 小見出しのフォントサイズを大きく */
+        margin-bottom: 1em; /* 小見出しと続く要素との間隔を調整 */
+      }
+
+      p {
+        font-size: 1.1rem; /* 本文のフォントサイズを少し大きく */
+        line-height: 1.8; /* 行間を広げてデスクトップでの可読性を向上 */
+      }
+
+      .arrowbtn {
+        float: left;
+      }
+      .map {
+        margin-top: 4em; /* 地図の上のマージンを調整 */
+        margin-bottom: 2.5em; /* 地図の下のマージンを調整 */
+        aspect-ratio: 2/1;
+        width: 80%;
+        /* 必要に応じて地図コンテナに最大幅を設定することも可能です */
+        /* 例: max-width: 800px; display: block; margin-left: auto; margin-right: auto; */
+        /* （ただし、.maincontent に max-width が設定されているため、地図が極端に広がることはありません） */
+      }
     }
   }
 }

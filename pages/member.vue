@@ -3,7 +3,7 @@
     <h2>部員紹介</h2>
     <h3>２回生</h3>
     <div class="modal-container">
-      <Modal v-for="item in two" :key="item.id">
+      <Modal v-for="item in two" :key="item.index">
         <template #button>
           <nuxt-img format="webp" :src="'/image/member/' + item.url + '.jpg'" />
           <p class="name">{{ item.title }}</p>
@@ -15,9 +15,9 @@
             <span>{{ item.position }}</span>
             {{ item.title }}
           </h2>
-          <p class="school">{{ item.school }}</p>
-          <p class="description" :eng="item.position">
-            {{ item.description }}
+          <p class="course">{{ item.course }}</p>
+          <p class="school" :eng="item.position">
+            {{ item.school }}
           </p>
         </template>
       </Modal>
@@ -52,7 +52,7 @@ h3 {
 /* レスポンシブ対応 */
 @media (max-width: 1025px) {
   .modal-container {
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 
   .modal-container :deep(.modal-button) {

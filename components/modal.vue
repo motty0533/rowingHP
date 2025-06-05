@@ -86,7 +86,7 @@ const closeModal = () => {
 
 .modal-content {
   background-color: white;
-  padding: 10%;
+  padding: 20% 10%;
   border-radius: 8px;
   max-width: 90%;
   max-height: 90%;
@@ -111,9 +111,9 @@ const closeModal = () => {
       font-weight: 500;
     }
   }
-  .description::before {
+  .school::before {
     position: absolute;
-    bottom: -1em;
+    bottom: -1.5em;
     right: 0;
     color: #afeeee;
     font-size: 2.7em;
@@ -123,7 +123,7 @@ const closeModal = () => {
     font-weight: 400;
   }
 
-  .school {
+  .course {
     margin-bottom: 0.7em;
   }
   p {

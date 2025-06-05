@@ -20,17 +20,6 @@ html {
 }
 
 
-.arrowbtn::after {
-	border-bottom: 1px solid var(--arrow-color); /* 下線のスタイルを矢印として設定 */
-	border-right: 1px solid var(--arrow-color); /* 右線のスタイルを矢印として設定 */
-	content: ''; /* 疑似要素のコンテンツを空に設定 */
-	width: 30px; /* 矢印の幅を30pxに設定 */
-	height: 10px; /* 矢印の高さを10pxに設定 */
-	position: absolute; /* 親要素に対して絶対位置 */
-	left: 100%; /* テキストの右端に配置 */
-	transform: skewX(50deg); /* 矢印の傾きの調整 */
-	transition: all .3s; /* なめらかな移動効果 */
-}
 
 /* マウスオーバー時の動き */
 .arrowbtn:hover::after {

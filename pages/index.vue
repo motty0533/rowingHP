@@ -155,6 +155,18 @@ definePageMeta({
       float: right;
     }
 
+    .arrowbtn::after {
+      border-bottom: 1px solid var(--arrow-color); /* 下線のスタイルを矢印として設定 */
+      border-right: 1px solid var(--arrow-color); /* 右線のスタイルを矢印として設定 */
+      content: ""; /* 疑似要素のコンテンツを空に設定 */
+      width: 30px; /* 矢印の幅を30pxに設定 */
+      height: 10px; /* 矢印の高さを10pxに設定 */
+      position: absolute; /* 親要素に対して絶対位置 */
+      left: 100%; /* テキストの右端に配置 */
+      transform: skewX(50deg); /* 矢印の傾きの調整 */
+      transition: all 0.3s; /* なめらかな移動効果 */
+    }
+
     .map {
       width: 100%;
       aspect-ratio: 9/9;
@@ -168,8 +180,8 @@ definePageMeta({
   .hero {
     .text-box {
       top: 70%; /* スマートフォン表示時(80%)より少し上に配置 */
-      left: 3%; /* 左からの位置を相対的に指定（元の-2emの代わりに画面幅に応じた余白を確保） */
-      width: 94%; /* 左右の3%ずつの余白を考慮した幅 */
+      left: 5%; /* 左からの位置を相対的に指定（元の-2emの代わりに画面幅に応じた余白を確保） */
+      width: 80%; /* 左右の3%ずつの余白を考慮した幅 */
     }
     h1 {
       font-size: 3.6rem; /* スマートフォン表示時(40px)よりフォントサイズを大きく */
@@ -182,10 +194,8 @@ definePageMeta({
   .maincontent {
     margin-top: 7em; /* ヒーローセクションとの間隔を調整 */
     margin-bottom: 7em; /* フッターとの間隔を調整 */
-    margin-left: auto; /* 中央寄せ */
-    margin-right: auto; /* 中央寄せ */
-    padding-left: 2rem; /* コンテンツ全体の左右の余白 */
-    padding-right: 2rem;
+    margin-left: 10%;
+    margin-right: 10%; /* 中央寄せ */
     max-width: 1140px; /* コンテンツの最大幅を設定し、横に広がりすぎるのを防ぐ */
 
     .wrapper {

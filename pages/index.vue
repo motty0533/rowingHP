@@ -27,12 +27,19 @@
           <p>いいいいいいいいいいいいいいいいいいいいいいいいいいい</p>
         </div>
       </div>
-      <div class="wrapper">
-        <h2 class="midashi" eng="Results">大会結果</h2>
-        <h3>2024年西医体総合優勝！</h3>
-        <p>ARES　一般男子舵手付きフォア優勝</p>
-        <p>SIMMAH　一般女子舵手付きクォドルプル３位</p>
-        <NuxtLink to="/result" class="arrowbtn" style="">more</NuxtLink>
+      <div class="wrapper result">
+        <div>
+          <h2 class="midashi" eng="Results">大会結果</h2>
+          <h3>2024年西医体総合優勝！</h3>
+          <p>ARES　一般男子舵手付きフォア優勝</p>
+          <p>SIMMAH　一般女子舵手付きクォドルプル３位</p>
+          <NuxtLink to="/result" class="arrowbtn" style="">more</NuxtLink>
+        </div>
+        <div class="img-frame">
+          <div class="img-01"></div>
+          <div class="img-02"></div>
+          <div class="img-03"></div>
+        </div>
       </div>
       <div class="wrapper">
         <h2 class="midashi" eng="Place">活動場所</h2>
@@ -186,7 +193,105 @@ definePageMeta({
       // box-shadow: 0 0 .7em gray;
     }
   }
+  .result {
+    display: flex;
+    flex-direction: column;
+    .img-frame {
+      position: relative;
+      width: 100%;
+      height: calc(500vw / 7);
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    .img-01,
+    .img-02,
+    .img-03 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .img-01 {
+      background-image: url("/image/result1.jpg");
+      animation: slide-animation-01 24s infinite;
+    }
+    .img-02 {
+      background-image: url("/image/result2.jpg");
+      animation: slide-animation-02 24s infinite;
+    }
+    .img-03 {
+      background-image: url("/image/result3.jpg");
+      animation: slide-animation-03 24s infinite;
+    }
+  }
 }
+
+// スライドショー用
+@keyframes slide-animation-01 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slide-animation-02 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide-animation-03 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
 @media screen and (min-width: 1024px) {
   /* ヒーローセクションの調整 */
   .hero {
@@ -251,12 +356,21 @@ definePageMeta({
       }
     }
     .whats {
-      display: flex;
       justify-content: space-between;
       flex-direction: row;
       gap: 2em;
       img {
         width: 40%;
+      }
+    }
+    .result {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2em;
+      .img-frame {
+        width: 40%;
+        height: calc(160vw / 7);
+        margin: 0;
       }
     }
   }

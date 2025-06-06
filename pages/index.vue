@@ -26,6 +26,16 @@
           </p>
         </div>
       </div>
+
+      <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M0,60 C300,120 600,0 900,60 C1050,90 1150,30 1200,60 L1200,120 L0,120 Z"
+            fill="#f5f5f5"
+          ></path>
+        </svg>
+      </div>
+
       <div class="wrapper result">
         <div>
           <h2 class="midashi" eng="Results">大会結果</h2>
@@ -40,6 +50,16 @@
           <div class="img-03"></div>
         </div>
       </div>
+
+      <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M0,70 C200,90 400,50 600,75 C800,95 1000,45 1200,70 L1200,0 L0,0 Z"
+            fill="#f5f5f5"
+          ></path>
+        </svg>
+      </div>
+
       <div class="wrapper">
         <h2 class="midashi" eng="Place">活動場所</h2>
         <iframe
@@ -99,30 +119,25 @@ definePageMeta({
     top: 80%;
     left: -2em;
     width: 100%;
-    // -webkit-transform: translate(-50%, -50%);
-    // -moz-transform: translate(-50%, -50%);
-    // transform: translate(-50%, -50%);
   }
   h1 {
     font-size: 40px;
     font-weight: 500;
     line-height: 1.2;
     padding: 0 50px;
-    // text-align: center;
     color: #fff;
     font-family: "Zen Antique";
   }
 }
 .maincontent {
-  margin: 5%;
-  margin-top: 5em;
+  padding-top: 5%;
 
   .wrapper {
-    margin-bottom: 30%;
-
+    padding: 5%;
+    padding-bottom: 5em;
     .midashi {
       position: relative;
-      margin-bottom: .5em;
+      margin-bottom: 0.5em;
       font-weight: bold;
       font-size: 2.3rem;
     }
@@ -184,6 +199,39 @@ definePageMeta({
     }
   }
 
+  // 波の背景の表現
+  .wave-divider {
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+  }
+
+  .wave-divider svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+  }
+
+  /* 上部セクションの背景を波の上まで延長 */
+  .wave-divider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+  }
+
+  /* 波の形状（グレー部分） */
+  .wave-divider svg {
+    z-index: 2;
+    display: block;
+  }
+
   .whats {
     display: flex;
     flex-direction: column-reverse;
@@ -196,6 +244,7 @@ definePageMeta({
     display: flex;
     flex-direction: column;
     gap: 2em;
+    background-color: #f5f5f5;
     .img-frame {
       position: relative;
       width: 100%;
@@ -309,13 +358,11 @@ definePageMeta({
 
   /* メインコンテンツセクションの調整 */
   .maincontent {
-    margin-top: 7em; /* ヒーローセクションとの間隔を調整 */
-    margin-bottom: 7em; /* フッターとの間隔を調整 */
-    margin-left: 10%;
-    margin-right: 10%; /* 中央寄せ */
 
     .wrapper {
-      margin-bottom: 7em; /* 各コンテンツブロック間のマージンを調整 */
+      padding-bottom: 7em; /* 各コンテンツブロック間のマージンを調整 */
+      padding-left: 10%;
+      padding-right: 10%;
 
       .midashi {
         font-size: 2.8rem; /* 見出しのフォントサイズを大きく */

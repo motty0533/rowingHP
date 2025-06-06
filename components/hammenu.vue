@@ -73,7 +73,7 @@ a:active {
   position: fixed;
   top: 3vh;
   right: 8vh;
-  z-index: 1;
+  z-index: 99;
 
   .checkbox-toggle {
     position: absolute;

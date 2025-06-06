@@ -17,7 +17,6 @@
     </section>
     <section class="maincontent">
       <div class="wrapper whats">
-        <nuxt-img format="webp" src="/image/rowing.jpg" />
         <div>
           <h2 class="midashi rowing" eng="What's rowing?">ボートとは？</h2>
           <p>５人１組で1000mのタイムを競う競技です。</p>
@@ -25,8 +24,9 @@
             ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
           </p>
         </div>
+        <nuxt-img format="webp" src="/image/rowing.jpg" />
       </div>
-
+      <!-- 波背景 -->
       <div class="wave-divider">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path
@@ -35,13 +35,18 @@
           ></path>
         </svg>
       </div>
-
+      <!-- 波背景終わり -->
       <div class="wrapper result">
         <div>
-          <h2 class="midashi" eng="Results">大会結果</h2>
+          <h2 class="midashi" eng="Results">
+            昨年度の栄光、<br />そして次なる挑戦へ
+          </h2>
           <h3>2024年西医体総合優勝！</h3>
           <p>ARES　一般男子舵手付きフォア優勝</p>
           <p>SIMMAH　一般女子舵手付きクォドルプル３位</p>
+          <p>
+            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+          </p>
           <NuxtLink to="/result" class="arrowbtn" style="">more</NuxtLink>
         </div>
         <div class="img-frame">
@@ -139,7 +144,7 @@ definePageMeta({
       position: relative;
       margin-bottom: 0.5em;
       font-weight: bold;
-      font-size: 2.3rem;
+      font-size: 2.3em;
     }
     // .midashi::before {
     //   position: absolute;
@@ -194,7 +199,7 @@ definePageMeta({
     .map {
       width: 100%;
       aspect-ratio: 9/9;
-      margin-top: 3em;
+      // margin-top: 3em;
       margin-bottom: 1.5em;
     }
   }
@@ -234,7 +239,7 @@ definePageMeta({
 
   .whats {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 2em;
     img {
       // box-shadow: 0 0 .7em gray;
@@ -358,14 +363,13 @@ definePageMeta({
 
   /* メインコンテンツセクションの調整 */
   .maincontent {
-
     .wrapper {
       padding-bottom: 7em; /* 各コンテンツブロック間のマージンを調整 */
       padding-left: 10%;
       padding-right: 10%;
 
       .midashi {
-        font-size: 2.8rem; /* 見出しのフォントサイズを大きく */
+        font-size: 2.3em; /* 見出しのフォントサイズを大きく */
         margin-bottom: 1rem; /* 見出しと続く要素との間隔を調整 */
       }
       .midashi::before {
@@ -373,14 +377,12 @@ definePageMeta({
         top: -0.4em; /* 位置を微調整 */
       }
       .rowing::before {
-        /* 16vw はデスクトップでは非常に大きくなるため、固定値に近い単位か、vwの値を調整 */
-        font-size: 2em; /* 例としてrem単位で指定（約144px相当）。元のvw指定より予測可能なサイズに */
-        /* もし画面幅に応じてある程度スケールさせたい場合は clamp(6rem, 10vw, 9rem) のような指定も考えられます */
-        top: -0.45em; /* フォントサイズ変更に伴い、位置を微調整 */
+        font-size: 2em;
+        top: -0.45em;
       }
 
       h3 {
-        font-size: 1.8rem; /* 小見出しのフォントサイズを大きく */
+        font-size: 1.8em; /* 小見出しのフォントサイズを大きく */
         margin-bottom: 1em; /* 小見出しと続く要素との間隔を調整 */
       }
 
@@ -393,8 +395,8 @@ definePageMeta({
         float: left;
       }
       .map {
-        margin-top: 4em; /* 地図の上のマージンを調整 */
-        margin-bottom: 2.5em; /* 地図の下のマージンを調整 */
+        // margin-top: 4em; /* 地図の上のマージンを調整 */
+        // margin-bottom: 2.5em; /* 地図の下のマージンを調整 */
         aspect-ratio: 2/1;
         width: 80%;
         /* 必要に応じて地図コンテナに最大幅を設定することも可能です */
@@ -411,11 +413,11 @@ definePageMeta({
       }
     }
     .result {
-      flex-direction: row;
+      flex-direction: row-reverse;
       justify-content: space-between;
       gap: 4em;
       .img-frame {
-        width: 40%;
+        min-width: 40%;
         height: calc(160vw / 7);
         margin: 0;
       }

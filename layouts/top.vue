@@ -1,17 +1,11 @@
 <template>
   <div>
-    <Hammenu />
+    <testmenu />
     <NuxtPage />
   </div>
 </template>
 
 <script>
-import Hammenu from "~/components/hammenu.vue";
-export default {
-  components: {
-    Hammenu,
-  },
-};
 </script>
 
 <style>

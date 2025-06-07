@@ -1,16 +1,10 @@
 <template>
   <div>
-    <Hammenu />
+    <testmenu />
     <NuxtLink to="/">Medical Rowing Osaka</NuxtLink>
   </div>
 </template>
 <script>
-import Hammenu from "~/components/hammenu.vue";
-export default {
-  components: {
-    Hammenu,
-  },
-};
 </script>
 <style lang="scss" scoped>
 a {

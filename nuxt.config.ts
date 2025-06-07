@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true, 
+  ssr: true,
   nitro: {
     preset: "cloudflare_pages", // Cloudflare Pages 用の設定
   },
@@ -11,12 +11,42 @@ export default defineNuxtConfig({
     layoutTransition: { name: "layout", mode: "out-in" },
 
     head: {
+      title: "大阪大学医学部ボート部",
+      titleTemplate: "%s/大阪大学医学部ボート部",
+      htmlAttrs: { lang: "ja" },
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+      ],
       link: [
         {
           rel: "stylesheet",
           href: "https://unpkg.com/modern-css-reset/dist/reset.min.css",
         },
-        { rel: "icon", type: "image/x-icon", href: "/icon.ico" },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "96x96",
+          href: "/icons/favicon-96x96.png",
+        },
+        {
+          rel: "icon",
+          type: "image/svg+xml",
+          href: "/icons/favicon.svg",
+        },
+        {
+          rel: "shortcut icon",
+          href: "/icons/favicon.ico",
+        },
+        {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/icons/apple-touch-icon.png",
+        },
+        {
+          rel: "manifest",
+          href: "/icons/site.webmanifest",
+        },
       ],
     },
   },

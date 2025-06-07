@@ -13,6 +13,9 @@
 </template>
 
 <script>
+useHead({
+  title: "大会結果",
+});
 export default {
   data() {
     return {

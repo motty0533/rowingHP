@@ -28,6 +28,10 @@
   </div>
 </template>
 <script setup>
+useHead({
+  title: "部員紹介",
+});
+
 import gradetwo from "~/assets/member/grade2.json";
 const two = ref(gradetwo);
 </script>

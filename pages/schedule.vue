@@ -15,6 +15,10 @@
 </template>
 
 <script>
+useHead({
+  title: "大会日程",
+});
+
 export default {
   data() {
     return {

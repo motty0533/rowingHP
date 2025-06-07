@@ -28,8 +28,8 @@
   </div>
 </template>
 <script setup>
-useHead({
-  title: "部員紹介",
+useSeoMeta({
+  title: "部員紹介/大阪大学医学部ボート部",
 });
 
 import gradetwo from "~/assets/member/grade2.json";

@@ -12,7 +12,6 @@ export default defineNuxtConfig({
 
     head: {
       title: "大阪大学医学部ボート部",
-      titleTemplate: "%s/大阪大学医学部ボート部",
       htmlAttrs: { lang: "ja" },
       meta: [
         { charset: "utf-8" },

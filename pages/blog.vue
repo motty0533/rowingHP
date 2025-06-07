@@ -4,8 +4,8 @@
     <h3 style="text-align: center">Coming Soon...</h3>
   </div>
 </template>
-<script>
-useHead({
-  title: "ブログ",
+<script setup>
+useSeoMeta({
+  title: "ブログ/大阪大学医学部ボート部",
 });
 </script>

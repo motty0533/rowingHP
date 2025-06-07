@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <h2>大会結果</h2>
-    <div v-for="item in itemlist" :key="item.id" class="wrapper">
+    <div v-for="item in items" :key="item.id" class="wrapper">
       <h3>{{ item.title }}</h3>
       <ul>
         <li v-for="content in item.contents" :key="content.index">
@@ -12,26 +12,21 @@
   </div>
 </template>
 
-<script>
-useHead({
-  title: "大会結果",
+<script setup>
+useSeoMeta({
+  title: "大会結果/大阪大学医学部ボート部",
 });
-export default {
-  data() {
-    return {
-      itemlist: [
-        {
-          title: "2024年西医体",
-          contents: [{ name: "男子対校艇ARES", rank: "１位🥇" }],
-        },
-        {
-          title: "2024年近医体",
-          contents: [{ name: "男子対校艇ARES", rank: "１位🥇" }],
-        },
-      ],
-    };
+
+const items = [
+  {
+    title: "2024年西医体",
+    contents: [{ name: "男子対校艇ARES", rank: "１位🥇" }],
   },
-};
+  {
+    title: "2024年近医体",
+    contents: [{ name: "男子対校艇ARES", rank: "１位🥇" }],
+  },
+];
 </script>
 
 <style lang="scss" scoped>

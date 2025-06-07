@@ -14,34 +14,28 @@
   </div>
 </template>
 
-<script>
-useHead({
-  title: "大会日程",
+<script setup>
+useSeoMeta({
+  title: "大会日程/大阪大学医学部ボート部",
 });
 
-export default {
-  data() {
-    return {
-      items: [
-        {
-          date: "200X年2月41日",
-          name: "阪大レガッタ",
-          place: "毛馬桜之宮公園",
-        },
-        {
-          date: "200X年2月41日",
-          name: "阪大レガッタ",
-          place: "毛馬桜之宮公園",
-        },
-        {
-          date: "200X年2月41日",
-          name: "阪大レガッタ",
-          place: "毛馬桜之宮公園",
-        },
-      ],
-    };
+const items = [
+  {
+    date: "200X年2月41日",
+    name: "阪大レガッタ",
+    place: "毛馬桜之宮公園",
   },
-};
+  {
+    date: "200X年2月41日",
+    name: "阪大レガッタ",
+    place: "毛馬桜之宮公園",
+  },
+  {
+    date: "200X年2月41日",
+    name: "阪大レガッタ",
+    place: "毛馬桜之宮公園",
+  },
+];
 </script>
 
 <style lang="scss" scoped>
